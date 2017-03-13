@@ -1,0 +1,13 @@
+<a href="#!/start">Back to home page</a><br>
+Forecast for {{name}}
+<hr>
+Days:<a href="#!/second/2" ng-class="{'bg-primary':num==='2'}">2</a>|<a href="#!/second/5" ng-class="{'bg-primary':num==='5'}">5</a>|<a href="#!/second/9" ng-class="{'bg-primary':num==='9'}">9</a>
+<hr>
+<h4>{{name}}</h4>
+<div ng-repeat="x in weatherresult.list">
+    <div class="row">
+    <div class="col-md-12">
+    <search-result weather-day="x" converter-date="convertdate(dt)" converter-temp="converttemp(temp)" date-format="MMM d,y" ></search-result>
+    </div>
+</div>
+</div>
